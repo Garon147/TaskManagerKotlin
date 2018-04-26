@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_task"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/task_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/task_name_hint"
+                style="@style/GreyTextStyle"/>
+
+            <LinearLayout
+                android:id="@+id/content_edit"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/task_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    style="@style/GreyTextStyle"/>
+
+                <EditText
+                    android:id="@+id/task_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/task_progress_hint"
+                    android:inputType="numberSigned"
+                    style="@style/GreyTextStyle" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/task_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/task_time_hint"
+                android:inputType="numberDecimal"
+                style="@style/GreyTextStyle"/>
+
+            <EditText
+                android:id="@+id/task_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/task_start_hint"
+                android:focusable="false"
+                style="@style/GreyTextStyle"/>
+
+            <EditText
+                android:id="@+id/task_due"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/task_due_hint"
+                android:focusable="false"
+                style="@style/GreyTextStyle"/>
+
+            <EditText
+                android:id="@+id/task_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/task_description_hint"
+                style="@style/GreyTextStyle"/>
+
+            <Button
+                android:id="@+id/button_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_task_toolbar"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
